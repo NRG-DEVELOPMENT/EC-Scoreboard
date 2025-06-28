@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    height: 100vh;
+    background-color: transparent;
+    padding-top: 50px; 
+
+}
+.scoreboard-container {
+    width: 800px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    border: 1px solid #7b2cbf;
+    position: relative; 
+}
+
+.scoreboard-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.close-button:hover {
+    background-color: rgba(123, 44, 191, 0.8);
+    transform: scale(1.1);
+}
+
+.scoreboard-header {
+    background: linear-gradient(90deg, #7b2cbf 0%, #5a189a 100%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scoreboard-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.online-count {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.job-counts {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #7b2cbf;
+}
+
+.job-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.job-icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.job-label {
+    font-size: 14px;
+    color: #c8b6ff;
+}
+
+.job-count {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.player-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.player-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.player-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.player-list::-webkit-scrollbar-thumb {
+    background: #7b2cbf;
+    border-radius: 5px;
+}
+
+.player-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.player-item:hover {
+    background-color: rgba(123, 44, 191, 0.2);
+    transform: translateX(5px);
+}
+
+.player-name {
+    font-weight: 500;
+    flex: 1;
+}
+
+.player-job {
+    color: #c8b6ff;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.player-id {
+    background-color: #7b2cbf;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.off-duty {
+    opacity: 0.6;
+}
+
+.scoreboard-footer {
+    padding: 10px;
+    text-align: center;
+    color: #c8b6ff;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.key-hint {
+    display: inline-block;
+    background-color: rgba(123, 44, 191, 0.5);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin: 0 3px;
+}
